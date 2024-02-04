@@ -11,7 +11,7 @@ export function todoService(db) {
     },
     createTodo: (todoData) => {
       const newTodo = {
-        id: db.length + 1,
+        id: todoData.id,
         text: todoData.text
       };
       db.push(newTodo);

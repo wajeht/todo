@@ -10,8 +10,8 @@ import {
   createTodoHandler
 } from './todo.handler.js';
 
-todo.post('/:todoId/update', updateTodoHandler(logger, todoService(db)));
-todo.post('/create', createTodoHandler(logger, todoService(db)));
+todo.patch('/:todoId', updateTodoHandler(logger, todoService(db)));
+todo.post('/', createTodoHandler(logger, todoService(db)));
 todo.get('/:todoId', getTodoHandler(logger, todoService(db)));
 todo.get('/', getAllTodosHandler(logger, todoService(db)));
 
