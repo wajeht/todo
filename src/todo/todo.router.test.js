@@ -5,15 +5,13 @@ import { db } from '../util.js';
 
 const app = request(server);
 
-beforeEach(() => {
-  vi.mock('../util.js', () => ({
-    logger: {
-      info: vi.fn(),
-      error: vi.fn()
-    },
-    db: []
-  }));
-});
+vi.mock('../util.js', () => ({
+  logger: {
+    info: vi.fn(),
+    error: vi.fn()
+  },
+  db: []
+}));
 
 it('should be able to get all todos', async () => {
   db.push({

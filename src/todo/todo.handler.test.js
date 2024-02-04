@@ -19,14 +19,19 @@ describe('updateTodoHandler', () => {
   it('should respond with success message on successful update', () => {
     const req = {
       params: { todoId: 'expected-id' },
-      body: { name: 'Updated Todo', completed: true }
+      body: { name: 'Updated Todo' }
     };
 
     let resSendCalledWith = '';
 
     const res = {
-      send: (message) => { resSendCalledWith = message; },
-      status: function(statusCode) { this.statusCode = statusCode; return this; }
+      send: (message) => {
+        resSendCalledWith = message;
+      },
+      status: function (statusCode) {
+        this.statusCode = statusCode;
+        return this;
+      }
     };
 
     const handler = updateTodoHandler(logger, todoService);
@@ -39,15 +44,18 @@ describe('updateTodoHandler', () => {
   it('should respond with error message on failed update', () => {
     const req = {
       params: { todoId: 'unexpected-id' },
-      body: { name: 'Failed Todo', completed: false }
+      body: { name: 'Failed Todo' }
     };
 
     const res = {
       send: () => {},
-      status: function(statusCode) { this.statusCode = statusCode; return this; }
+      status: function (statusCode) {
+        this.statusCode = statusCode;
+        return this;
+      }
     };
 
-    const handler = updateTodoHandler(logger, todoService)
+    const handler = updateTodoHandler(logger, todoService);
 
     handler(req, res);
 
