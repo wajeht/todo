@@ -9,11 +9,11 @@ export const logger = {
 
 export const db = [
   {
-    id: 1,
+    id: '1',
     text: 'eat'
   },
   {
-    id: 2,
+    id: '2',
     text: 'sleep'
   }
 ];

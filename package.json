@@ -8,13 +8,13 @@
     "dev": "nodemon ./src/server.js",
     "start": "node ./src/server.js",
     "test": "vitest"
-
   },
   "keywords": [],
   "author": "wajeht",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^3.0.3",
+    "supertest": "^6.3.4",
     "vitest": "^1.2.2"
   },
   "dependencies": {
