@@ -9,4 +9,13 @@ export function logger() {
   };
 }
 
-export const db = [];
+export const db = [
+  {
+    id: 1,
+    text: 'eat'
+  },
+  {
+    id: 2,
+    text: 'sleep'
+  }
+];
