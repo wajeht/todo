@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { todo } from './todos/todo.router.js';
+import { todo } from './todo/todo.router.js';
 
 const app = express();
 
