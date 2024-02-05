@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { it, expect, vi, afterEach, beforeEach } from 'vitest';
+import { it, expect, vi } from 'vitest';
 import { app as server } from '../app.js';
 import { db } from '../util.js';
 
