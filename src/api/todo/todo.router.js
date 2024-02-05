@@ -2,7 +2,7 @@ import express from 'express';
 const todo = express.Router();
 
 import { todoService } from './todo.service.js';
-import { logger, db } from '../util.js';
+import { logger, db } from '../../util/util.js';
 import {
   updateTodoHandler,
   getTodoHandler,

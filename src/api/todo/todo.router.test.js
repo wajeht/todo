@@ -1,11 +1,11 @@
 import request from 'supertest';
 import { it, expect, vi } from 'vitest';
-import { app as server } from '../app.js';
-import { db } from '../util.js';
+import { app as server } from '../../app.js';
+import { db } from '../../util.js';
 
 const app = request(server);
 
-vi.mock('../util.js', () => ({
+vi.mock('../../util.js', () => ({
   logger: {
     info: vi.fn(),
     error: vi.fn()
